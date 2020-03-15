@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include <stdlib.h>
+int runs();
+int main()
+{
+    for (float y = 1.5f; y > -1.5f; y -= 0.1f)
+	{
+        for (float x = -1.5f; x < 1.5f; x += 0.05f)
+		{
+            float z = x * x + y * y - 1;
+            float f = z * z * z - x * x * y * y * y;
+            putchar(f <= 0.0f ? ".:-=+*#%@"[(int)(f * -8.0f)] : ' ');
+        }//画爱心
+        putchar('\n');
+    }
+
+int x;
+for(;;)
+{
+printf("\n");
+printf("\n");
+printf(" 人体生物节律周期");
+printf("\n");
+printf("\n");
+printf("1:返回 \n");
+printf("\n");
+printf("\n");
+printf("2:退出 \n");
+printf("\n");
+printf("\n");
+printf("3:显示 \n");
+printf("\n");
+printf("\n");
+printf("please choice the number or press 0 to Exit: ");
+scanf("%d",&x);
+printf("\n");
+printf("\n");
+if(x==2)
+break;
+switch(x)
+{
+case 1: break;
+case 3: runs();break;
+default:
+printf(" Error!!!\n");
+break;
+}
+}
+return 0;
+}
+int runs()
+{
+int i,j;
+char a[7][7]={{' ',' ', ' ','*'},{' ',' ','*','*','*'},{' ','*','*','*','*','*'},{'*','*','*','*','*','*','*'},{' ','*','*','*','*','*'},{' ',' ','*','*','*'},{' ',' ',' ','*'}};
+for(i=0;i<7;i++)
+{
+for(j=0;j<7;j++)
+printf("%c",a[i][j]);
+printf("\n");
+}//可替换程序
+printf("\n");
+printf("press any key to return Menu : ");
+system("pause");
+printf("\n");
+system("cls");
+return 0;
+}
